@@ -1,0 +1,24 @@
+.img-card{
+    width: 120px;
+    aspect-ratio: 1/1;
+}
+.border{
+    border: black solid 2px;
+    background-color: darkmagenta;
+
+}
+.btn {
+    width: 20%;
+    border-radius: 20%;
+    margin: 2%;
+    border: white 2px solid;
+}
+
+.btn:hover {
+    width: 22%;
+    transition: 1s;
+}
+
+.white-text{
+    color: white;
+}
