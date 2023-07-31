@@ -8,6 +8,9 @@ const babyatripple = document.getElementsByClassName("babyatripple")
 const farts = document.getElementsByClassName("fart")
 const knuckles = document.getElementsByClassName("knuckles")
 const snores =  document.getElementsByClassName("snoring")
+const slipping =  document.getElementsByClassName("slipping")
+const spiderman =  document.getElementsByClassName("spiderman")
+
 
 // GLOBAL FUNCTIONS
 const villagerSound = () => {
@@ -48,8 +51,17 @@ const snoringSound = () => {
     sound.play();
 };
 
+const slippingSound = () => {
+    let sound = new Audio('audio/slipping.mp3');
+    sound.play();
+};
+const spiderManSound = () => {
+    let sound = new Audio('audio/spiderman.mp3');
+    sound.play();
+};
+////////////////
 // GLOBAL EVENTS
-
+////////////////
 for (const villager of villagers) {
     villager.addEventListener("click", () => {
         console.log("FIRED");
@@ -113,3 +125,18 @@ for (const snore of snores) {
         snoringSound();
     });
 }
+for (const slip of slipping) {
+    slip.addEventListener("click", () => {
+        console.log("FIRED");
+        // Call the slippingSound function if needed
+        slippingSound();
+    });
+}
+for (const spider of spiderman) {
+    spider.addEventListener("click", () => {
+        console.log("FIRED");
+        // Call the  spiderManSound() function if needed
+   spiderManSound()
+    });
+}
+
