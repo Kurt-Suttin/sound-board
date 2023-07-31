@@ -6,28 +6,26 @@ const yodaDied = document.getElementsByClassName("yoda")
 const bruh = document.getElementsByClassName("bruh")
 const babyatripple = document.getElementsByClassName("babyatripple")
 const farts = document.getElementsByClassName("fart")
+const knuckles = document.getElementsByClassName("knuckles")
+const snores =  document.getElementsByClassName("snoring")
 
 // GLOBAL FUNCTIONS
 const villagerSound = () => {
     let sound = new Audio('audio/villager.mp3');
     sound.play();
 };
-
 const zombieWalkerSound = () => {
     let sound = new Audio('audio/zombie-walker.mp3');
     sound.play();
 };
-
 const tromboneWaWaWaSound = () => {
     let sound = new Audio('audio/Trombone.mp3');
     sound.play();
 };
-
 const yodaSound = () => {
     let sound = new Audio('audio/yoda.mp3');
     sound.play();
 };
-
 const bruhSound = () => {
     let sound = new Audio('audio/bruh.mp3');
     sound.play();
@@ -40,6 +38,16 @@ const fartSound = () => {
     let sound = new Audio('audio/fart.mp3');
     sound.play();
 };
+const knucklesSound = () => {
+    let sound = new Audio('audio/knuckles.mp3');
+    sound.play();
+};
+
+const snoringSound = () => {
+    let sound = new Audio('audio/snoring.mp3');
+    sound.play();
+};
+
 // GLOBAL EVENTS
 
 for (const villager of villagers) {
@@ -91,4 +99,17 @@ for (const fart of farts) {
         fartSound()
     });
 }
-
+for (const knuckle of knuckles) {
+    knuckle.addEventListener("click", () => {
+        console.log("FIRED");
+        // Call the knucklesSound function if needed
+        knucklesSound();
+    });
+}
+for (const snore of snores) {
+    snore.addEventListener("click", () => {
+        console.log("FIRED");
+        // Call the snoringSound function if needed
+        snoringSound();
+    });
+}
