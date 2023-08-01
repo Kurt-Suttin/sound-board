@@ -10,7 +10,7 @@ const knuckles = document.getElementsByClassName("knuckles")
 const snores =  document.getElementsByClassName("snoring")
 const slipping =  document.getElementsByClassName("slipping")
 const spiderman =  document.getElementsByClassName("spiderman")
-
+const r2d2 = document.getElementsByClassName("r2d2")
 
 // GLOBAL FUNCTIONS
 const villagerSound = () => {
@@ -57,6 +57,10 @@ const slippingSound = () => {
 };
 const spiderManSound = () => {
     let sound = new Audio('audio/spiderman.mp3');
+    sound.play();
+};
+const r2d2Sound = () => {
+    let sound = new Audio('audio/r2d2.mp3');
     sound.play();
 };
 ////////////////
@@ -139,4 +143,10 @@ for (const spider of spiderman) {
    spiderManSound()
     });
 }
-
+for (const r2 of r2d2) {
+    r2.addEventListener("click", () => {
+        console.log("FIRED");
+        // Call the  r2d2Sound() function if needed
+        r2d2Sound()
+    });
+}
