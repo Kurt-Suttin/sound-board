@@ -11,7 +11,7 @@ const snores =  document.getElementsByClassName("snoring")
 const slipping =  document.getElementsByClassName("slipping")
 const spiderman =  document.getElementsByClassName("spiderman")
 const r2d2 = document.getElementsByClassName("r2d2")
-
+const halo = document.getElementsByClassName("halo")
 // GLOBAL FUNCTIONS
 const villagerSound = () => {
     let sound = new Audio('audio/villager.mp3');
@@ -61,6 +61,11 @@ const spiderManSound = () => {
 };
 const r2d2Sound = () => {
     let sound = new Audio('audio/r2d2.mp3');
+    sound.play();
+};
+
+const slayerSound = () => {
+    let sound = new Audio('audio/slayer.mp3');
     sound.play();
 };
 ////////////////
@@ -148,5 +153,12 @@ for (const r2 of r2d2) {
         console.log("FIRED");
         // Call the  r2d2Sound() function if needed
         r2d2Sound()
+    });
+}
+for (const slayer of halo) {
+    slayer.addEventListener("click", () => {
+        console.log("FIRED");
+        // Call the  slayerSound() function if needed
+        slayerSound()
     });
 }
