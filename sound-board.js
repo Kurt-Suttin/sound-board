@@ -7,12 +7,14 @@ const bruh = document.getElementsByClassName("bruh")
 const babyatripple = document.getElementsByClassName("babyatripple")
 const farts = document.getElementsByClassName("fart")
 const knuckles = document.getElementsByClassName("knuckles")
-const snores =  document.getElementsByClassName("snoring")
-const slipping =  document.getElementsByClassName("slipping")
-const spiderman =  document.getElementsByClassName("spiderman")
+const snores = document.getElementsByClassName("snoring")
+const slipping = document.getElementsByClassName("slipping")
+const spiderman = document.getElementsByClassName("spiderman")
 const r2d2 = document.getElementsByClassName("r2d2")
 const halo = document.getElementsByClassName("halo")
 const okay = document.getElementsByClassName("ok")
+const windows = document.getElementsByClassName("window")
+
 
 // GLOBAL FUNCTIONS
 const villagerSound = () => {
@@ -72,6 +74,10 @@ const slayerSound = () => {
 };
 const okaySound = () => {
     let sound = new Audio('audio/okay.mp3');
+    sound.play();
+};
+const windowSound = () => {
+    let sound = new Audio('audio/windows.mp3');
     sound.play();
 };
 ////////////////
@@ -151,7 +157,7 @@ for (const spider of spiderman) {
     spider.addEventListener("click", () => {
         console.log("FIRED");
         // Call the  spiderManSound() function if needed
-   spiderManSound()
+        spiderManSound()
     });
 }
 for (const r2 of r2d2) {
@@ -174,4 +180,12 @@ for (const ok of okay) {
         // Call the  okaySound() function if needed
         okaySound();
     });
+    for (const win of windows) {
+        win.addEventListener("click", () => {
+            console.log("FIRED");
+            // Call the  windowSound() function if needed
+            windowSound();
+        });
+    }
+
 }
