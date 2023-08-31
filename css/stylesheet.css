@@ -1,5 +1,5 @@
 .main-background-color{
-background-color: rgba(2, 46, 79, 0.59);
+background-color: rgba(79, 2, 20, 0.59);
 }
 .header-of-soundboard{
     color: white;
@@ -8,4 +8,22 @@ background-color: rgba(2, 46, 79, 0.59);
 }
 .main-container{
     background-color: #000000;
+}
+
+/*////*/
+.mt-1{
+    margin-top: 10px;
+}
+
+.mt-2{
+    margin-top: 20px;
+}
+.mt-3{
+    margin-top: 30px;
+}
+.mt-4{
+    margin-top: 40px;
+}
+.mt-5{
+    margin-top: 50px;
 }
