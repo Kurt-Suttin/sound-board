@@ -14,6 +14,7 @@ const r2d2 = document.getElementsByClassName("r2d2")
 const halo = document.getElementsByClassName("halo")
 const okay = document.getElementsByClassName("ok")
 const windows = document.getElementsByClassName("window")
+const crickets = document.getElementsByClassName("cricket")
 
 
 // GLOBAL FUNCTIONS
@@ -78,6 +79,10 @@ const okaySound = () => {
 };
 const windowSound = () => {
     let sound = new Audio('audio/windows.mp3');
+    sound.play();
+};
+const cricketSound = () => {
+    let sound = new Audio('audio/crickets.mp3');
     sound.play();
 };
 ////////////////
@@ -185,6 +190,13 @@ for (const ok of okay) {
             console.log("FIRED");
             // Call the  windowSound() function if needed
             windowSound();
+        });
+    }
+    for (const cricket of crickets) {
+        cricket.addEventListener("click", () => {
+            console.log("FIRED");
+            // Call the cricketSound() function if needed
+            cricketSound()();
         });
     }
 
